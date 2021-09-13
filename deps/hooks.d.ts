@@ -1,4 +1,4 @@
-import { PreactContext, Ref as PreactRef } from "./react.d.ts";
+import { PreactContext, Ref as PreactRef } from "./preact.d.ts";
 
 type Inputs = ReadonlyArray<unknown>;
 

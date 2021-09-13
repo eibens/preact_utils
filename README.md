@@ -12,22 +12,28 @@ Simply import `.ts` and `.tsx` files from this repository using TypeScript URL
 imports:
 
 ```ts
-import { useHover } from "https://raw.githubusercontent.com/eibens/preact_utils/<ref>/hooks/use_hover.ts";
+import * as React from "https://raw.githubusercontent.com/eibens/preact_utils/<ref>/preact.ts";
 ```
 
-## Hooks
+## Preact and Preact hooks
 
-The [hooks](hooks) directory contains commonly needed hooks.
+The [preact.ts](preact.ts) module exports all core Preact features with Deno
+compatible typings. The [hooks.ts](hooks.ts) module exports all Preact hooks.
+Only one version of Preact is supported right now. Once Preact supports Deno out
+of the box, one should import the official source files.
 
-## TSX and Typings
+```ts
+import * as React from "<base_url>/preact.ts";
+import { useEffect } from "<base_url>/hooks.ts";
+```
 
-The [deps](deps) directory exports the Preact library with correct Deno typings.
-Only one version of Preact is supported right now. Once Preact supports Deno,
-one should import the official files.
+## Custom Hooks
 
-```tsx
-import * as React from "<base_url>/deps/react.ts";
-import { useEffect } from "<base_url>/deps/hooks.ts";
+The [hooks](hooks) directory contains custom hooks that I find useful. The
+[hooks/mod.ts](hooks/mod.ts) module exports all custom hooks.
+
+```ts
+import { useHover } from "<base_url>/hooks/mod.ts";
 ```
 
 <!-- badges -->

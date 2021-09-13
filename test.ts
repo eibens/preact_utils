@@ -3,13 +3,13 @@
 /// <reference no-default-lib="true"/>
 /// <reference lib="deno.ns" />
 
-// Simply import every file.
 // TODO: Write real tests (see coverage reports).
-import "./hooks/use_delta.ts";
-import "./hooks/use_event.ts";
-import "./hooks/use_focus.ts";
-import "./hooks/use_frame.ts";
-import "./hooks/use_global_css.ts";
-import "./hooks/use_hover.ts";
-import "./hooks/use_interval.ts";
-import "./hooks/use_pointer.ts";
+import * as React from "./preact.ts";
+import "./hooks.ts";
+import "./hooks/mod.ts";
+
+Deno.test("render function is defined", () => {
+  if (typeof React["render"] !== "function") {
+    throw new Error();
+  }
+});

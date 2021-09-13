@@ -6,7 +6,7 @@ import {
   Component,
   PreactDOMAttributes,
   VNode,
-} from "./react.d.ts";
+} from "./preact.d.ts";
 
 type Defaultize<Props, Defaults> =
   // Distribute over unions
