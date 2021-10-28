@@ -8,11 +8,11 @@ using [Preact](https://preactjs.com) in TypeScript for Deno.
 
 # Documentation
 
-Simply import `.ts` and `.tsx` files from this repository using TypeScript URL
-imports:
+Simply import `.ts` and `.tsx` files from this repository using ESM URL imports:
 
 ```ts
-import * as React from "https://raw.githubusercontent.com/eibens/preact_utils/<ref>/preact.ts";
+// Import Preact, Preact hooks, and custom hooks.
+import * as React from "https://raw.githubusercontent.com/eibens/preact_utils/<ref>/mod.ts";
 ```
 
 ## Preact and Preact hooks

@@ -4,9 +4,7 @@
 /// <reference lib="deno.ns" />
 
 // TODO: Write real tests (see coverage reports).
-import * as React from "./preact.ts";
-import "./hooks.ts";
-import "./hooks/mod.ts";
+import * as React from "./mod.ts";
 
 Deno.test("render function is defined", () => {
   if (typeof React["render"] !== "function") {
