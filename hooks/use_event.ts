@@ -1,5 +1,5 @@
 /// <reference lib="dom"/>
-import { PropRef, useEffect } from "../deps/hooks.ts";
+import { Ref, useEffect } from "../deps/hooks.ts";
 
 export type EventMap = Record<string, unknown>;
 
@@ -15,14 +15,14 @@ export type EventTarget<T extends EventTarget<T, M>, M extends EventMap> = {
 };
 
 export function useEvent<K extends keyof HTMLElementEventMap>(
-  ref: PropRef<HTMLElement>,
+  ref: Ref<HTMLElement>,
   type: K,
   handler: (event: HTMLElementEventMap[K]) => void,
   inputs?: unknown[],
 ): void;
 
 export function useEvent<K extends keyof WindowEventMap>(
-  ref: PropRef<Window>,
+  ref: Ref<Window>,
   type: keyof WindowEventMap,
   handler: (event: WindowEventMap[K]) => void,
   inputs?: unknown[],
@@ -33,7 +33,7 @@ export function useEvent<
   M extends EventMap,
   K extends keyof M,
 >(
-  ref: PropRef<T>,
+  ref: Ref<T>,
   type: K,
   handler: (event: M[K]) => void,
   inputs?: unknown[],

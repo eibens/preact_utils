@@ -1,4 +1,4 @@
-import { PropRef, useState } from "../deps/hooks.ts";
+import { Ref, useState } from "../deps/hooks.ts";
 import { useEvent } from "./use_event.ts";
 
 type Pair = [number, number];
@@ -11,7 +11,7 @@ function linear([a, b]: Pair, [c, d]: Pair): Scale {
   return (x: number, w: number) => x * s + w * t;
 }
 
-export function usePointer(ref: PropRef<HTMLElement>): Pair {
+export function usePointer(ref: Ref<HTMLElement>): Pair {
   const [position, setPosition] = useState<Pair>([0, 0]);
 
   useEvent(ref, "pointermove", (e) => {
