@@ -36,6 +36,11 @@ The [hooks](hooks) directory contains custom hooks that I find useful. The
 import { useHover } from "<base_url>/hooks/mod.ts";
 ```
 
+# License
+
+See the [LICENSE](LICENSE) file. Everything under [preact](preact) was copied
+from the original preact project and [preact/LICENSE](preact/LICENSE).
+
 <!-- badges -->
 
 [github]: https://github.com/eibens/preact_utils
