@@ -1,9 +1,7 @@
-import { cli } from "https://deno.land/x/edcb@v0.9.0-alpha.2/cli.ts";
+import { cli } from "https://deno.land/x/edcb@v1.0.0-alpha.6/mod.ts";
 
 if (import.meta.main) {
   await cli({
-    check: {
-      ignore: "deps",
-    },
+    ignore: "deps,preact",
   });
 }
