@@ -1,1 +1,1 @@
-export * from "../preact.ts"
+export * from "../preact.ts";
